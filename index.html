@@ -1,0 +1,224 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> Diet Page demo</title>
+
+    <link href="./Mobileappstyle.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="row pt-5">
+        <div class="col-12 pt-3 pb-2">
+            <div class="d-flex flex-row justify-content-between p-1 m-1">
+                <img src="./Icons/arrow_back2.svg" alt="Alternate Text" height="30px" style="margin-left: -15px" />
+                <img src="./Icons/close.svg" alt="Alternate Text" height="30px" />
+            </div>
+        </div>
+        <div class="col-8 ">
+            <h1 class="heading pb-0 mb-0">Week</h1>
+            <div>
+                <h2 class="fw-light p-0 m-0" style="white-space: nowrap; display: inline-block;">One</h2>
+                <div class="text-center" style="display: inline-block; vertical-align: middle; margin-bottom: 9px;"><span class="badge bg-success rounded-pill" syle="margin-bottom: 9px;">Paid</span></div>
+            </div>
+        </div>
+        <div class="col-4 leftborderdivider">
+            <div class="">
+                <h4 class="fw-bold">MAR</h4>
+                <h4 class="fw-light">04</h4>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-12 ">
+            <div class="card text-center">
+                <div class="card-header p-1 m-2">
+                    <ul class="nav nav-tabs card-header-tabs" data-bs-tabs="tabs" role="tablist">
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link active" aria-current="true" aria-selected="true" data-bs-toggle="tab" href="#Overview">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Dietchart" data-bs-toggle="tab">Diet Chart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Foods" data-bs-toggle="tab">Foods</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="Overview">
+                            <div class="mb-1">
+                                <h3>DIET OVERVIEW</h3>
+                                <p class="m-0">Calories: <span>2500</span> Kcal</p>
+                                <p class="m-0">Protein: <span>160</span> g</p>
+                                <p class="m-0">Carbs: <span>250</span> g</p>
+                                <p class="m-0">Fats: <span>60</span> g</p>
+                            </div>
+                            <div class="chart">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="tab-pane text-start" id="Foods">
+                            <h3>Food checklist</h3>
+                            <ul class="checklist">
+                                <li> <input type="checkbox" name="name" value="" /> Iteam 1</li>
+                                <li> <input type="checkbox" name="name" value="" /> Iteam 2</li>
+                                <li> <input type="checkbox" name="name" value="" /> Iteam 3</li>
+                                <li> <input type="checkbox" name="name" value="" /> Iteam 4</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane " id="Dietchart">
+                            <h3>Diet Chart Picture</h3>
+                            <img class="img-fluid" src="./Icons/Dietchart.jpg" alt="Alternate Text" />
+                            <div class="dietchartdetailed text-start">
+
+                                <div class="mealblocks">
+                                    <h4 class="mb-0 fw-bolder">Breakfast</h4>
+                                    <p class="fw-bold " style="display:inline">Dish 1:</p>
+                                    <p class="fw-light" style="display:inline">
+                                        5 slices of wheat bread, any vegetables can be added in
+                                        sandwich. 6 boiled eggs or scrambled eggs. 5 egg white + 1 whole eggs = 6 eggs in
+                                        total.
+                                        <span class="oil">Not more than 5ml Oil/Ghee should be used.</span>
+                                    </p>
+                                </div>
+                                <div class="mealblocks">
+                                    <h4 class="mb-0 fw-bolder">Lunch</h4>
+                                    <p class="fw-bold" style="display:inline">Dish 1:</p>
+                                    <p class="fw-light" style="display:inline">
+                                        5 slices of wheat bread, any vegetables can be added in
+                                        sandwich. 6 boiled eggs or scrambled eggs. 5 egg white + 1 whole eggs = 6 eggs in
+                                        total.
+                                        <span class="oil">Not more than 5ml Oil/Ghee should be used.</span>
+                                    </p>
+                                </div>
+                                <div class="mealblocks">
+                                    <h4 class="mb-0 fw-bolder">Dinner</h4>
+                                    <p class="fw-bold" style="display:inline">Dish 1:</p>
+                                    <p class="fw-light" style="display:inline">
+                                        5 slices of wheat bread, any vegetables can be added in
+                                        sandwich. 6 boiled eggs or scrambled eggs. 5 egg white + 1 whole eggs = 6 eggs in
+                                        total.
+                                        <span class="oil">Not more than 5ml Oil/Ghee should be used.</span>
+                                    </p>
+                                </div>
+                                <div class="mealblocks">
+                                    <h4 class="mb-0 fw-bolder">Snacks</h4>
+                                    <p class="fw-bold" style="display:inline">Dish 1:</p>
+                                    <p class="fw-light" style="display:inline">
+                                        5 slices of wheat bread, any vegetables can be added in
+                                        sandwich. 6 boiled eggs or scrambled eggs. 5 egg white + 1 whole eggs = 6 eggs in
+                                        total.
+                                        <span class="oil">Not more than 5ml Oil/Ghee should be used.</span>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="pt-2 standardveggies">
+                                <h4 class="mb-0 fw-bolder text-start">Vegetables</h4>
+                                <p class="fw-lighter">
+                                    These vegetables are low in calories and can be taken without affecting our diet much.
+                                </p>
+                                <p class="mt-0 pt-0 fw-light">Rotate veggies every day from the list to meet all the micro nutrient intake. </p>
+                                <ul class="list">
+                                    <li>Mushroom</li>
+                                    <li>Lettuce</li>
+                                    <li>Cucumber</li>
+                                    <li>Cucumber</li>
+                                    <li>Radish</li>
+                                    <li>Cabbage</li>
+                                    <li>Green Peppers</li>
+                                    <li>Tomatoes</li>
+                                    <li>Spinach</li>
+                                    <li>Cauliflower</li>
+                                    <li>Sprouts</li>
+                                    <li>Sprouts</li>
+                                    <li>Broccoli</li>
+                                    <li>Broccoli</li>
+                                    <li>Beans</li>
+                                </ul>
+                            </div>
+                            <div class="pt-2 standardfruit">
+                                <h4 class="mb-0 fw-bolder text-start">Fruits</h4>
+                                <p class="fw-lighter">
+                                    These fruit are low to moderate calories and can be taken without affecting our diet much.
+                                </p>
+                                <p class="mt-0 pt-0 fw-light">Rotate fruits every day from the list to meet all the micro nutrient intake. </p>
+                                <ul class="list">
+                                    <li>Apple</li>
+                                    <li>Guava</li>
+                                    <li>Pomegranate</li>
+                                    <li>Orange</li>
+                                    <li>Sweet lime</li>
+                                    <li>Watermelon</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+
+
+
+    $(document).ready(function () {
+        $('#size').text(screen.width);
+        console.log(screen.width);
+    });
+
+    const labels = [
+        'Protein',
+        'Fat',
+        'Carb'
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: '%',
+            data: [50, 25, 25],
+            backgroundColor: ['rgb(214, 40, 57)',
+                'rgb(186, 50, 79)',
+                'rgb(23, 86, 118)'],
+            borderColor: [
+                'rgb(75, 163, 195)',
+                'rgb(75, 163, 195)',
+                'rgb(75, 163, 195)'],
+            borderWidth: 2,
+        }],
+
+    };
+
+    const config = {
+        type: 'pie',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                }
+            }
+        }
+    };
+
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config);
+
+</script>
+</html>
