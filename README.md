@@ -1,2 +1,2 @@
-# DietpageTest
-This is a sample static page for example.
+# Dietpage Prototye
+This is a prototype page for Diet plans
