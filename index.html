@@ -8,218 +8,333 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="row pt-5">
-        <div class="col-12 pt-3 pb-2">
-            <div class="d-flex flex-row justify-content-between p-1 m-1">
-                <img src="./icons/arrow_back2.svg" alt="Alternate Text" height="30px" style="margin-left: -15px" />
-                <img src="./icons/close.svg" alt="Alternate Text" height="30px" />
-            </div>
-        </div>
-        <div class="col-8 ">
-            <h1 class="heading pb-0 mb-0">Week</h1>
-            <div>
-                <h2 class="fw-light p-0 m-0" style="white-space: nowrap; display: inline-block;">One</h2>
-                <div class="text-center" style="display: inline-block; vertical-align: middle; margin-bottom: 9px;"><span class="badge bg-success rounded-pill" syle="margin-bottom: 9px;">Paid</span></div>
-            </div>
-        </div>
-        <div class="col-4 leftborderdivider">
-            <div class="">
-                <h4 class="fw-bold">MAR</h4>
-                <h4 class="fw-light">04</h4>
-            </div>
-        </div>
+
+    <div class="toptoaster mt-0">
+        <div class="text-center  " style="display: inline-block; vertical-align: middle;"><span class="badge rounded-pill newpill">New</span></div>
+        <p class="lh-1 p-0 m-0" style="display: inline-block;">&#160;Diet plans will be delivered via the prototype &#160;</p>
     </div>
-    <hr />
-
-    <div class="row">
-        <div class="col-12 ">
-            <div class="card text-center">
-                <div class="card-header p-1 m-2">
-                    <ul class="nav nav-tabs card-header-tabs" data-bs-tabs="tabs" role="tablist">
-                        <li class="nav-item nav-pills">
-                            <a class="nav-link active" aria-current="true" aria-selected="true" data-bs-toggle="tab" href="#Overview">Overview</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Dietchart" data-bs-toggle="tab">Diet Chart</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Foods" data-bs-toggle="tab">Foods</a>
-                        </li>
-                    </ul>
+    <div class="container body-content">
+        <div class="container containerbody">
+        <div class="row pt-4">
+            <div class="col-12 pt-3 pb-2">
+                <div class="d-flex flex-row justify-content-between p-1 m-1">
+                    <img src="./icons/arrow_back2.svg" alt="Alternate Text" height="30px" style="margin-left: -15px" id="btnback" />
+                    <img src="./icons/close.svg" alt="Alternate Text" height="30px" id="btnclose" />
                 </div>
-                <div class="card-body">
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="Overview">
-                            <div class="mb-1">
-                                <h3>DIET OVERVIEW</h3>
-                                <p class="m-0">Calories: <span>2500</span> Kcal</p>
-                                <p class="m-0">Protein: <span>160</span> g</p>
-                                <p class="m-0">Carbs: <span>250</span> g</p>
-                                <p class="m-0">Fats: <span>60</span> g</p>
-                            </div>
-                            <div class="chart">
-                                <canvas id="myChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="tab-pane text-start" id="Foods">
-                            <h3>Food checklist</h3>
-                            <ul class="checklist">
-                                <li> <input type="checkbox" name="name" value="" /> Iteam 1</li>
-                                <li> <input type="checkbox" name="name" value="" /> Iteam 2</li>
-                                <li> <input type="checkbox" name="name" value="" /> Iteam 3</li>
-                                <li> <input type="checkbox" name="name" value="" /> Iteam 4</li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane " id="Dietchart">
-                            <h3>Diet Chart Picture</h3>
-                            <img class="img-fluid" src="./icons/Dietchart.jpg" alt="Alternate Text" />
-                            <div class="dietchartdetailed text-start">
+            </div>
+            <div class="col-8 ">
+                <h1 class="heading pb-0 mb-0">Week</h1>
+                <div>
+                    <h2 class="fw-light p-0 m-0" id="weeknumber" style="white-space: nowrap; display: inline-block;">One</h2>
+                    <div class="text-center" style="display: inline-block; vertical-align: middle; margin-bottom: 9px;"><span class="badge bg-success rounded-pill" id="payment" syle="margin-bottom: 9px;"></span></div>
+                </div>
+            </div>
+            <div class="col-4 leftborderdivider">
+                <div class="">
+                    <h4 class="fw-bold text-capitalize" id="month">MAR</h4>
+                    <h4 class="fw-light" id="day">04</h4>
+                </div>
+            </div>
+        </div>
+        <hr />
 
-                                <div class="mealblocks">
-                                    <h4 class="mb-0 fw-bolder">Breakfast</h4>
-                                    <p class="fw-bold " style="display:inline">Dish 1:</p>
-                                    <p class="fw-light" style="display:inline">
-                                        5 slices of wheat bread, any vegetables can be added in
-                                        sandwich. 6 boiled eggs or scrambled eggs. 5 egg white + 1 whole eggs = 6 eggs in
-                                        total.
-                                        <span class="oil">Not more than 5ml Oil/Ghee should be used.</span>
-                                    </p>
-                                </div>
-                                <div class="mealblocks">
-                                    <h4 class="mb-0 fw-bolder">Lunch</h4>
-                                    <p class="fw-bold" style="display:inline">Dish 1:</p>
-                                    <p class="fw-light" style="display:inline">
-                                        5 slices of wheat bread, any vegetables can be added in
-                                        sandwich. 6 boiled eggs or scrambled eggs. 5 egg white + 1 whole eggs = 6 eggs in
-                                        total.
-                                        <span class="oil">Not more than 5ml Oil/Ghee should be used.</span>
-                                    </p>
-                                </div>
-                                <div class="mealblocks">
-                                    <h4 class="mb-0 fw-bolder">Dinner</h4>
-                                    <p class="fw-bold" style="display:inline">Dish 1:</p>
-                                    <p class="fw-light" style="display:inline">
-                                        5 slices of wheat bread, any vegetables can be added in
-                                        sandwich. 6 boiled eggs or scrambled eggs. 5 egg white + 1 whole eggs = 6 eggs in
-                                        total.
-                                        <span class="oil">Not more than 5ml Oil/Ghee should be used.</span>
-                                    </p>
-                                </div>
-                                <div class="mealblocks">
-                                    <h4 class="mb-0 fw-bolder">Snacks</h4>
-                                    <p class="fw-bold" style="display:inline">Dish 1:</p>
-                                    <p class="fw-light" style="display:inline">
-                                        5 slices of wheat bread, any vegetables can be added in
-                                        sandwich. 6 boiled eggs or scrambled eggs. 5 egg white + 1 whole eggs = 6 eggs in
-                                        total.
-                                        <span class="oil">Not more than 5ml Oil/Ghee should be used.</span>
-                                    </p>
-                                </div>
+        <div class="row">
+            <div class="col-12">
 
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs" data-bs-tabs="tabs" role="tablist">
+                            <li class="nav-item nav-pills">
+                                <a class="nav-link active" aria-current="true" aria-selected="true" data-bs-toggle="tab" href="#Overview">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Dietchart" data-bs-toggle="tab">Diet Chart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Foods" data-bs-toggle="tab">Files</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Overview">
+                                <div class="mb-1">
+                                    <h3>DIET OVERVIEW</h3>
+                                    <p class="m-0">Calories: <span id="calories"></span> Kcal</p>
+                                    <p class="m-0">Protein: <span id="protein"></span> g</p>
+                                    <p class="m-0">Carbs: <span id="carb"></span> g</p>
+                                    <p class="m-0">Fats: <span id="fat"></span> g</p>
+                                </div>
+                                <div class="chart">
+                                    <canvas id="myChart"></canvas>
+                                </div>
                             </div>
-                            <div class="pt-2 standardveggies">
-                                <h4 class="mb-0 fw-bolder text-start">Vegetables</h4>
-                                <p class="fw-lighter">
-                                    These vegetables are low in calories and can be taken without affecting our diet much.
-                                </p>
-                                <p class="mt-0 pt-0 fw-light">Rotate veggies every day from the list to meet all the micro nutrient intake. </p>
-                                <ul class="list">
-                                    <li>Mushroom</li>
-                                    <li>Lettuce</li>
-                                    <li>Cucumber</li>
-                                    <li>Cucumber</li>
-                                    <li>Radish</li>
-                                    <li>Cabbage</li>
-                                    <li>Green Peppers</li>
-                                    <li>Tomatoes</li>
-                                    <li>Spinach</li>
-                                    <li>Cauliflower</li>
-                                    <li>Sprouts</li>
-                                    <li>Sprouts</li>
-                                    <li>Broccoli</li>
-                                    <li>Broccoli</li>
-                                    <li>Beans</li>
-                                </ul>
+                            <div class="tab-pane text-start " id="Foods">
+                                <h4>Download trainning plans</h4>
+                                <div class="p-1 mt-1">
+                                    <a href="#" id="dietplanurl" class="link-dark">Diet plan.pdf</a>
+                                    <br />
+                                    <a href="#" id="trainningplanurl" class="link-dark">Trainning excel.xls</a>
+                                    <br />
+                                    <a href="#" id="trackerurl" class="link-dark">Tracking.xls</a>
+                                </div>
                             </div>
-                            <div class="pt-2 standardfruit">
-                                <h4 class="mb-0 fw-bolder text-start">Fruits</h4>
-                                <p class="fw-lighter">
-                                    These fruit are low to moderate calories and can be taken without affecting our diet much.
-                                </p>
-                                <p class="mt-0 pt-0 fw-light">Rotate fruits every day from the list to meet all the micro nutrient intake. </p>
-                                <ul class="list">
-                                    <li>Apple</li>
-                                    <li>Guava</li>
-                                    <li>Pomegranate</li>
-                                    <li>Orange</li>
-                                    <li>Sweet lime</li>
-                                    <li>Watermelon</li>
-                                </ul>
+                            <div class="tab-pane " id="Dietchart">
+                                <h3>Diet Chart Picture</h3>
+                                <img class="img-fluid" id="dietcharturl" />
+                                <h4 class="bg-light mt-2 p-1">
+                                    As long as you eat all the meals. There is no problem. There is no separate time to have your meals. The recommended time is to space each meals 3-5hrs apart.
+                                </h4>
+                                <h4 class="p-0 m-3 bg-light">YOU CAN ONLY USE 5ML OF OIL PER MEAL</h4>
+                                <div class="dietchartdetailed text-start">
+                                </div>
+                                <div class="pt-2 standardveggies">
+                                    <h4 class="mb-0 fw-bolder text-start">Vegetables</h4>
+                                    <p class="fw-lighter">
+                                        These vegetables are low in calories and can be taken without affecting our diet much.
+                                    </p>
+                                    <p class="mt-0 pt-0 fw-light">Rotate veggies every day from the list to meet all the micro nutrient intake. </p>
+                                    <ul class="list">
+                                        <li>Mushroom</li>
+                                        <li>Lettuce</li>
+                                        <li>Cucumber</li>
+                                        <li>Cucumber</li>
+                                        <li>Radish</li>
+                                        <li>Cabbage</li>
+                                        <li>Green Peppers</li>
+                                        <li>Tomatoes</li>
+                                        <li>Spinach</li>
+                                        <li>Cauliflower</li>
+                                        <li>Sprouts</li>
+                                        <li>Sprouts</li>
+                                        <li>Broccoli</li>
+                                        <li>Broccoli</li>
+                                        <li>Beans</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-2 standardfruit">
+                                    <h4 class="mb-0 fw-bolder text-start">Fruits</h4>
+                                    <p class="fw-lighter">
+                                        These fruit are low to moderate calories and can be taken without affecting our diet much.
+                                    </p>
+                                    <p class="mt-0 pt-0 fw-light">Rotate fruits every day from the list to meet all the micro nutrient intake. </p>
+                                    <ul class="list">
+                                        <li>Apple</li>
+                                        <li>Guava</li>
+                                        <li>Pomegranate</li>
+                                        <li>Orange</li>
+                                        <li>Sweet lime</li>
+                                        <li>Watermelon</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Unlock with the secret pasephrase</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body align-self-center ">
+                        <input class="form-control" type="text" id="username" name="secretkey" value="" placeholder="Name" />
+                        <br />
+                        <input class="form-control" type="text" id="pass" name="secretkey" value="" placeholder="Enter the secret key" />
+                    </div>
+                    <div class="modal-footer align-self-center">
+                        <button type="submit" id="btnlogin" class="btn btn-primary mb-2">Confirm identity</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-
+    </div>
 </body>
-
+</html>
 <script>
-
-
+    var jsondata;
 
     $(document).ready(function () {
-        $('#size').text(screen.width);
-        console.log(screen.width);
+        $("#staticBackdrop").modal('show');
     });
 
-    const labels = [
-        'Protein',
-        'Fat',
-        'Carb'
-    ];
+    $('#btnclose').click(function () {
+        window.close();
+    });
 
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: '%',
-            data: [50, 25, 25],
-            backgroundColor: ['rgb(214, 40, 57)',
-                'rgb(186, 50, 79)',
-                'rgb(23, 86, 118)'],
-            borderColor: [
-                'rgb(75, 163, 195)',
-                'rgb(75, 163, 195)',
-                'rgb(75, 163, 195)'],
-            borderWidth: 2,
-        }],
+    $('#btnlogin').click(function () {
 
-    };
+        var username = $('#username').val();
+        var pass = $('#pass').val();
+        jsondata = login(username, pass);
+        $("#staticBackdrop").modal('hide');
 
-    const config = {
-        type: 'pie',
-        data: data,
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'top',
+
+    });
+
+    function loaddata(jsonstring) {
+        IsJsonString(JSON.stringify(jsonstring));
+        jsondata = JSON.parse(jsonstring);
+
+        var mealblocks = jsondata.dietExplnation;
+        var basicdiet = jsondata.basicDiet
+        var plan = jsondata.plan;
+        var urls = jsondata.urls;
+
+
+
+        var totalcalories = basicdiet?.totalCalories;
+        var proteinspercentage = (basicdiet?.proteins * 400) / totalcalories;
+        var fatpercentage = (basicdiet?.fats * 900) / totalcalories;
+        var carbpercentage = (basicdiet?.carbs * 400) / totalcalories;
+
+
+        let date = new Date();
+        const day = date.toLocaleString('default', { day: '2-digit' });
+        const month = date.toLocaleString('default', { month: 'long' });
+
+
+
+        var startdate = plan.startdate;
+        var payment = plan.payment;
+        var week = plan.week;
+        var enddate = new Date(startdate);
+        enddate.setDate(enddate.getDate() + 27);
+        today = new Date();
+        enddate.setHours(0, 0, 0, 0);
+        today.setHours(0, 0, 0, 0);
+
+        appendmealblocks(mealblocks);
+
+        if (enddate.getTime() <= today.getTime()) {
+            payment = "Unpaid";
+            $('#payment').text(payment);
+            $('#payment').removeClass("bg-success");
+            $('#payment').addClass("bg-danger");
+        }
+
+        $('#payment').text(payment);
+        $('#weeknumber').text(week);
+
+        $('#month').text(month.toUpperCase());
+        $('#day').text(day);
+
+        $('#calories').text(totalcalories);
+        $('#protein').text(basicdiet?.proteins);
+        $('#carb').text(basicdiet?.carbs);
+        $('#fat').text(basicdiet?.fats);
+
+
+
+        $("#dietcharturl").attr('src', urls.dietcharturl);
+
+        $('#trackerurl').attr('href', urls.trackerurl);
+        $('#trainningplanurl').attr('href', urls.trainningurl);
+        $('#dietplanurl').attr('href', urls.dietplanurl);
+
+
+        const labels = [
+            'Protein',
+            'Fat',
+            'Carb'
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: '%',
+                data: [proteinspercentage, fatpercentage, carbpercentage],
+                backgroundColor: ['#FF4069',
+                    '#059BFF',
+                    '#4BC0C0'],
+            }],
+
+        };
+
+        const config = {
+            type: 'doughnut',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
                 }
             }
+        };
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config);
+
+    }
+
+
+    async function login(username, password) {
+        if (username == "Kumaran") {
+            todecrypt = "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";
+            let promise = new Promise((resolve, reject) => {
+                var decipher = CryptoJS.AES.decrypt(todecrypt, password);
+                decipher = decipher.toString(CryptoJS.enc.Utf8);
+                resolve(decipher);
+            });
+            let result = await promise;
+            loaddata(await promise);
+            console.log("success: " + result);
+            return result;
         }
-    };
+        if (username == "Arvind") {
+
+        }
+    }
 
 
-    const myChart = new Chart(
-        document.getElementById('myChart'),
-        config);
+    function appendmealblocks(mealblocks) {
+        mealblocks.forEach(function (item, index, array) {
+            var toappend = '<div class="mealblocks"> <h5 class="mb-0 fw-bold">' + item?.mealName + '</h5 >';
+
+            item.meals.forEach(function (mealitem, mealindex, mealarray) {
+                toappend += '<p class="fw-bold " style="display:inline">' + (mealindex + 1) + '. ' + mealitem?.dishName + ':&#160;</p>';
+                toappend += '<p class="fw-light" style="display:inline">' + mealitem?.dishContent + '</p>'
+                toappend += '</br>'
+            })
+            toappend += '</div>';
+
+            $('.dietchartdetailed').append(toappend);
+        })
+    }
+
+
+    function IsJsonString(str) {
+        try {
+            JSON.parse(str);
+        } catch (e) {
+            alert("Fuck you!");
+        }
+        return true;
+    }
+
+
+    async function waitfordecrypt() {
+        let myPromise = new Promise(function (resolve) {
+
+
+            setTimeout(function () { resolve("I love You !!"); }, 3000);
+        });
+        document.getElementById("demo").innerHTML = await myPromise;
+    }
 
 </script>
-</html>
+
+

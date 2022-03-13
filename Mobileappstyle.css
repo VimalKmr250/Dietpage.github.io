@@ -1,13 +1,31 @@
 ﻿@font-face {
-	font-family: Montserrat-VariableFont_wght;
-	src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-family: Montserrat-VariableFont_wght;
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.containerbody{
+/*    padding-left:10px;
+    padding-right: 10px;
+    margin: 10px;*/
+}
+
+.dl-horizontal dt {
+    white-space: normal;
 }
 
 body {
     background-color: Rgb(242,242,247);
-    padding: 10px 25px 10px 25px !important;
-    margin: 10px 25px 10px 25px !important;
-    padding-bottom: 20px;
+   
 }
 
 .heading {
@@ -133,30 +151,30 @@ body {
     font-family: Montserrat-VariableFont_wght;
 }
 
-.oil{
-    color:red;
-    font-weight:lighter
+.oil {
+    color: red;
+    font-weight: lighter
 }
-.mealblocks{
-    margin:10px auto 10px auto;
-   
+
+.mealblocks {
+    margin: 10px auto 10px auto;
 }
+
 .standardveggies {
     font-family: Montserrat-VariableFont_wght;
-    text-align:left;
-    padding:10px;
-
+    text-align: left;
+    padding: 10px;
 }
 
-.standardveggies p {
-    font-weight:normal;
-    margin-bottom:0px;
-    padding-bottom:0px;
-}
+    .standardveggies p {
+        font-weight: normal;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
 
-.list{
-    padding-left: 1rem !important;      
-    font-weight:normal;
+.list {
+    padding-left: 1rem !important;
+    font-weight: normal;
 }
 
 .standardfruit p {
@@ -171,17 +189,41 @@ body {
     padding: 10px;
 }
 
-.list li:hover{
-    
+
+
+.chart {
+    height: 350px;
+    width: 100%;
 }
 
-.chart{
-    height:350px;
-    width:100%;
+
+.toptoaster {
+    background-color: #282a35;
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 15px;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
-.checklist {
-    list-style-type: none;
-    text-align:left;
-    margin-left:0px;
-    padding-left: 0px;
+
+.newpill {
+    background-color: #fff4a3;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    color: black;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
+    margin: 3px;
+}
+
+.card-header-tabs {
+    margin-right: -0.5rem;
+    margin-bottom: -0.5rem;
+    margin-left: 0.5rem !important;
+    border-bottom: 0;
 }
