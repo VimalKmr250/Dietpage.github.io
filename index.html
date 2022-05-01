@@ -170,12 +170,12 @@
     var jsondata;
 
 
-    //var key = "";
-    //var toencry = "";
-    //// (C) ENCRYPT
-    //var cipher = CryptoJS.AES.encrypt(toencry, key);
-    //cipher = cipher.toString();
-    //console.log(cipher);
+    var key = "";
+    var toencry = "";
+    // (C) ENCRYPT
+    var cipher = CryptoJS.AES.encrypt(toencry, key);
+    cipher = cipher.toString();
+    console.log(cipher);
 
     $(document).ready(function () {
         $("#staticBackdrop").modal('show');
@@ -341,19 +341,19 @@
             return result;
         }
         else if (username == "Roshan" || username == "Vimal2") {
-            todecrypt = "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";
+            todecrypt = "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";
             let promise = new Promise((resolve, reject) => {
                 var decipher = CryptoJS.AES.decrypt(todecrypt, password);
                 decipher = decipher.toString(CryptoJS.enc.Utf8);
                 resolve(decipher);
                 swal({
-                    title: "Missed check-in!",
-                    text: "Repeating the same plan for next week. Please message me to know the changes",
+                    title: "Made changes in diet and trainning !",
+                    text: "Please message me if you have any doubts",
                     icon: "warning",
                 }).then(() => {
                     swal({
-                        title: "Take it slow, No rush",
-                        text: "I want you to Go to the gym and feel the movement, Not increasing any weights this week or reps!",
+                        title: "Execution videos",
+                        text: "Need execution videos, I have been slacking a bit to follow up on you, THIS TIME EXECUTION VIDEOS IS MUST!",
                         icon: "info",
                     });
                 });
