@@ -21,148 +21,148 @@
     </div>
     <div class="container body-content">
         <div class="container containerbody">
-        <div class="row pt-4">
-            <div class="col-12 pt-3 pb-2">
-                <div class="d-flex flex-row justify-content-between p-1 m-1">
-                    <img src="./icons/arrow_back2.svg" alt="Alternate Text" height="30px" style="margin-left: -15px" id="btnback" />
-                    <img src="./icons/close.svg" alt="Alternate Text" height="30px" id="btnclose" />
-                </div>
-            </div>
-            <div class="col-8 ">
-                <h1 class="heading pb-0 mb-0">Week</h1>
-                <div>
-                    <h2 class="fw-light p-0 m-0" id="weeknumber" style="white-space: nowrap; display: inline-block;">One</h2>
-                    <div class="text-center" style="display: inline-block; vertical-align: middle; margin-bottom: 9px;"><span class="badge bg-success rounded-pill" id="payment" syle="margin-bottom: 9px;"></span></div>
-                </div>
-            </div>
-            <div class="col-4 leftborderdivider">
-                <div class="">
-                    <h4 class="fw-bold text-capitalize" id="month">MAR</h4>
-                    <h4 class="fw-light" id="day">04</h4>
-                </div>
-            </div>
-        </div>
-        <hr />
-
-        <div class="row">
-            <div class="col-12">
-
-                <div class="card text-center">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs" data-bs-tabs="tabs" role="tablist">
-                            <li class="nav-item nav-pills">
-                                <a class="nav-link active" aria-current="true" aria-selected="true" data-bs-toggle="tab" href="#Overview">Overview</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Dietchart" data-bs-toggle="tab">Diet Chart</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Foods" data-bs-toggle="tab">Files</a>
-                            </li>
-                        </ul>
+            <div class="row pt-4">
+                <div class="col-12 pt-3 pb-2">
+                    <div class="d-flex flex-row justify-content-between p-1 m-1">
+                        <img src="./icons/arrow_back2.svg" alt="Alternate Text" height="30px" style="margin-left: -15px" id="btnback" />
+                        <img src="./icons/close.svg" alt="Alternate Text" height="30px" id="btnclose" />
                     </div>
-                    <div class="card-body">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="Overview">
-                                <div class="mb-1">
-                                    <h3>DIET OVERVIEW</h3>
-                                    <p class="m-0">Calories: <span id="calories"></span> Kcal</p>
-                                    <p class="m-0">Protein: <span id="protein"></span> g</p>
-                                    <p class="m-0">Carbs: <span id="carb"></span> g</p>
-                                    <p class="m-0">Fats: <span id="fat"></span> g</p>
-                                </div>
-                                <div class="chart">
-                                    <canvas id="myChart"></canvas>
-                                </div>
-                                <div class="pt-2 mt-3">
-                                    <a class="fw-bold text-decoration-underline hovergreen" href="https://wa.link/0qpk4r"><span><img src="./icons/whatsapp.svg" /></span> To Enroll </a>
-                                </div>
-                            </div>
-                            <div class="tab-pane text-start " id="Foods">
-                                <h4>Download trainning plans</h4>
-                                <div class="p-1 mt-1">
-                                    <a href="#" id="dietplanurl" class="link-dark" target="_blank">Diet plan.pdf</a>
-                                    <br />
-                                    <a href="#" id="trainningplanurl" class="link-dark" target="_blank">Trainning excel.xls</a>
-                                    <br />
-                                    <a href="#" id="trackerurl" class="link-dark" target="_blank">Tracking.xls</a>
+                </div>
+                <div class="col-8 ">
+                    <h1 class="heading pb-0 mb-0">Week</h1>
+                    <div>
+                        <h2 class="fw-light p-0 m-0" id="weeknumber" style="white-space: nowrap; display: inline-block;">One</h2>
+                        <div class="text-center" style="display: inline-block; vertical-align: middle; margin-bottom: 9px;"><span class="badge bg-success rounded-pill" id="payment" syle="margin-bottom: 9px;"></span></div>
+                    </div>
+                </div>
+                <div class="col-4 leftborderdivider">
+                    <div class="">
+                        <h4 class="fw-bold text-capitalize" id="month">MAR</h4>
+                        <h4 class="fw-light" id="day">04</h4>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs" data-bs-tabs="tabs" role="tablist">
+                                <li class="nav-item nav-pills">
+                                    <a class="nav-link active" aria-current="true" aria-selected="true" data-bs-toggle="tab" href="#Overview">Overview</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Dietchart" data-bs-toggle="tab">Diet Chart</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Foods" data-bs-toggle="tab">Files</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="Overview">
+                                    <div class="mb-1">
+                                        <h3>DIET OVERVIEW</h3>
+                                        <p class="m-0">Calories: <span id="calories"></span> Kcal</p>
+                                        <p class="m-0">Protein: <span id="protein"></span> g</p>
+                                        <p class="m-0">Carbs: <span id="carb"></span> g</p>
+                                        <p class="m-0">Fats: <span id="fat"></span> g</p>
+                                    </div>
+                                    <div class="chart">
+                                        <canvas id="myChart"></canvas>
+                                    </div>
                                     <div class="pt-2 mt-3">
-                                        <a class="fw-bold text-decoration-underline hovergreen" href="https://wa.link/b3uz2t"><span><img src="./icons/whatsapp.svg" /></span> Feedbacks </a>
+                                        <a class="fw-bold text-decoration-underline hovergreen" href="https://wa.link/0qpk4r"><span><img src="./icons/whatsapp.svg" /></span> To Enroll </a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane " id="Dietchart">
-                                <h3>Diet Chart Picture</h3>
-                                <img class="img-fluid" id="dietcharturl" />
-                                <h4 class="bg-light mt-2 p-1">
-                                    As long as you eat all the meals. There is no problem. There is no separate time to have your meals. The recommended time is to space each meals 3-5hrs apart.
-                                </h4>
-                                <h4 class="p-0 m-3 bg-light">YOU CAN ONLY USE 5ML OF OIL PER MEAL</h4>
-                                <div class="dietchartdetailed text-start">
+                                <div class="tab-pane text-start " id="Foods">
+                                    <h4>Download trainning plans</h4>
+                                    <div class="p-1 mt-1">
+                                        <a href="#" id="dietplanurl" class="link-dark" target="_blank">Diet plan.pdf</a>
+                                        <br />
+                                        <a href="#" id="trainningplanurl" class="link-dark" target="_blank">Trainning excel.xls</a>
+                                        <br />
+                                        <a href="#" id="trackerurl" class="link-dark" target="_blank">Tracking.xls</a>
+                                        <div class="pt-2 mt-3">
+                                            <a class="fw-bold text-decoration-underline hovergreen" href="https://wa.link/b3uz2t"><span><img src="./icons/whatsapp.svg" /></span> Feedbacks </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="pt-2 standardveggies">
-                                    <h4 class="mb-0 fw-bolder text-start">Vegetables</h4>
-                                    <p class="fw-lighter">
-                                        These vegetables are low in calories and can be taken without affecting our diet much.
-                                    </p>
-                                    <p class="mt-0 pt-0 fw-light">Rotate veggies every day from the list to meet all the micro nutrient intake. </p>
-                                    <ul class="list">
-                                        <li>Mushroom</li>
-                                        <li>Lettuce</li>                                      
-                                        <li>Cucumber</li>
-                                        <li>Radish</li>
-                                        <li>Cabbage</li>
-                                        <li>Green Peppers</li>
-                                        <li>Tomatoes</li>
-                                        <li>Spinach</li>
-                                        <li>Cauliflower</li>
-                                        <li>Sprouts</li>                                    
-                                        <li>Broccoli</li>                                      
-                                        <li>Beans</li>
-                                    </ul>
-                                </div>
-                                <div class="pt-2 standardfruit">
-                                    <h4 class="mb-0 fw-bolder text-start">Fruits</h4>
-                                    <p class="fw-lighter">
-                                        These fruit are low to moderate calories and can be taken without affecting our diet much.
-                                    </p>
-                                    <p class="mt-0 pt-0 fw-light">Rotate fruits every day from the list to meet all the micro nutrient intake. </p>
-                                    <ul class="list">
-                                        <li>Apple</li>
-                                        <li>Guava</li>
-                                        <li>Pomegranate</li>
-                                        <li>Orange</li>
-                                        <li>Sweet lime</li>
-                                        <li>Watermelon</li>
-                                    </ul>
+                                <div class="tab-pane " id="Dietchart">
+                                    <h3>Diet Chart Picture</h3>
+                                    <img class="img-fluid" id="dietcharturl" />
+                                    <h4 class="bg-light mt-2 p-1">
+                                        As long as you eat all the meals. There is no problem. There is no separate time to have your meals. The recommended time is to space each meals 3-5hrs apart.
+                                    </h4>
+                                    <h4 class="p-0 m-3 bg-light">YOU CAN ONLY USE 5ML OF OIL PER MEAL</h4>
+                                    <div class="dietchartdetailed text-start">
+                                    </div>
+                                    <div class="pt-2 standardveggies">
+                                        <h4 class="mb-0 fw-bolder text-start">Vegetables</h4>
+                                        <p class="fw-lighter">
+                                            These vegetables are low in calories and can be taken without affecting our diet much.
+                                        </p>
+                                        <p class="mt-0 pt-0 fw-light">Rotate veggies every day from the list to meet all the micro nutrient intake. </p>
+                                        <ul class="list">
+                                            <li>Mushroom</li>
+                                            <li>Lettuce</li>
+                                            <li>Cucumber</li>
+                                            <li>Radish</li>
+                                            <li>Cabbage</li>
+                                            <li>Green Peppers</li>
+                                            <li>Tomatoes</li>
+                                            <li>Spinach</li>
+                                            <li>Cauliflower</li>
+                                            <li>Sprouts</li>
+                                            <li>Broccoli</li>
+                                            <li>Beans</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pt-2 standardfruit">
+                                        <h4 class="mb-0 fw-bolder text-start">Fruits</h4>
+                                        <p class="fw-lighter">
+                                            These fruit are low to moderate calories and can be taken without affecting our diet much.
+                                        </p>
+                                        <p class="mt-0 pt-0 fw-light">Rotate fruits every day from the list to meet all the micro nutrient intake. </p>
+                                        <ul class="list">
+                                            <li>Apple</li>
+                                            <li>Guava</li>
+                                            <li>Pomegranate</li>
+                                            <li>Orange</li>
+                                            <li>Sweet lime</li>
+                                            <li>Watermelon</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-        </div>
-
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title text-center w-100" id="staticBackdropLabel">Login</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body align-self-center ">
-                        <input class="form-control" type="text" id="username" name="secretkey" value="" placeholder="Name" />
-                        <br />
-                        <input class="form-control" type="password" id="pass" name="secretkey" value="" placeholder="Enter the secret key" />
-                    </div>
-                    <div class="modal-footer align-self-center">
-                        <button type="submit" id="btnlogin" class="btn btn-primary mb-2">Sign In</button>
-                    </div>
                 </div>
             </div>
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title text-center w-100" id="staticBackdropLabel">Login</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body align-self-center ">
+                            <input class="form-control" type="text" id="username" name="secretkey" value="" placeholder="Name" />
+                            <br />
+                            <input class="form-control" type="password" id="pass" name="secretkey" value="" placeholder="Enter the secret key" />
+                        </div>
+                        <div class="modal-footer align-self-center">
+                            <button type="submit" id="btnlogin" class="btn btn-primary mb-2">Sign In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </body>
 </html>
@@ -329,11 +329,34 @@
                 var decipher = CryptoJS.AES.decrypt(todecrypt, password);
                 decipher = decipher.toString(CryptoJS.enc.Utf8);
                 resolve(decipher);
+                swal({
+                    title: "Need more effort this week. 5K steps per week.",
+                    text: "I want you to be active this week. You have more food now",
+                    icon: "info",
+                });
+            });
+            let result = await promise;
+            loaddata(await promise);
+            console.log("success: " + result);
+            return result;
+        }
+        else if (username == "Lathishya" || username == "Vimal3") {
+            todecrypt = "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";
+            let promise = new Promise((resolve, reject) => {
+                var decipher = CryptoJS.AES.decrypt(todecrypt, password);
+                decipher = decipher.toString(CryptoJS.enc.Utf8);
+                resolve(decipher);
+                swal({
+                    title: "Payment Due!",
+                    text: "Payment for the current 4 week plan is due.",
+                    icon: "warning",
+                }).then(() => {
                     swal({
-                        title: "Need more effort this week. 5K steps per week.",
-                        text: "I want you to be active this week. You have more food now",
+                        title: "This is a strict & crash diet!",
+                        text: "If your eating outside, Please try to have low calories foods.",
                         icon: "info",
-                    });
+                    })
+                });
             });
             let result = await promise;
             loaddata(await promise);
@@ -399,5 +422,7 @@
     }
 
 </script>
+
+
 
 
