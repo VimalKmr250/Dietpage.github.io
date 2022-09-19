@@ -393,16 +393,10 @@
                 decipher = decipher.toString(CryptoJS.enc.Utf8);
                 resolve(decipher);
                 swal({
-                    title: "Good work this week!",
-                    text: "Keep the same next week",
-                    icon: "warning",
-                }).then(() => {
-                    swal({
-                        title: "Execution videos",
-                        text: "Need execution videos same like this week. EXECUTION VIDEOS IS MUST!",
-                        icon: "info",
-                    });
-                });
+                    title: "Sorry for the delay! ",
+                    text: "Aim for 6K steps per day!",
+                    icon: "info",
+                })              
             });
             let result = await promise;
             loaddata(await promise);
